@@ -1,0 +1,13 @@
+node_modules/
+# IntellijIdea files
+.idea/
+.DS_Store
+.vscode/
+
+libs/
+samples/
+
+.csscomb.json
+.yarn.package.json
+.yarnrc
+

@@ -1,0 +1,80 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 250px;
+  height: $gap-x3;
+  padding-right: 1em;
+  padding-left: 1em;
+
+  font-size: 1.125rem;
+
+  transition: background-color 0.5s;
+  letter-spacing: 0.1em;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+
+  &--light {
+    border: 2px solid $color-light;
+    background-color: rgba($color-light, 0.1);
+
+    @include lg-min {
+      width: 250px;
+      height: $gap-x3;
+
+      font-size: 1.125rem;
+    }
+
+    @include lg {
+      font-size: 1rem;
+    }
+
+    @include lg-md {
+      width: 200px;
+      height: 50px;
+    }
+    @include md {
+      width: 170px;
+      height: $gap-x2;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &--primary {
+    border: 2px solid $color-primary;
+    background-color: rgba($color-primary, 0.8);
+
+    @include sm-min {
+      width: 350px;
+    }
+    @include sm {
+      width: 100%;
+    }
+  }
+}
+
+.form .btn--primary {
+  width: 100%;
+  color: $color-light;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    border: 2px solid $color-light;
+  }
+
+}
+
+.fab {
+  font-size: 36px;
+}
