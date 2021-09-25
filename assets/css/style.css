@@ -422,6 +422,9 @@ input {
   line-height: 1.15;
   overflow: visible;
 }
+input:focus {
+  outline: none;
+}
 
 .btn {
   display: -webkit-box;
@@ -800,6 +803,14 @@ input {
   border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
   font-size: 1.125rem;
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.form-item__input:hover, .form-item__input:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 .posts__container {
   max-width: 1340px;
@@ -1144,7 +1155,7 @@ input {
     right: 20px;
     display: none;
     text-align: right;
-    background-color: rgba(68, 89, 110, 0.5);
+    background-color: rgba(68, 89, 110, 0.9);
     margin: 0;
     padding: 0;
     list-style: none;

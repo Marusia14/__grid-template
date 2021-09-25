@@ -35,6 +35,14 @@
     border-bottom-color: rgba(255, 255, 255, 0.25);
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1.125rem;
+    transition: background-color 0.5s, border-color 0.5s;
+
+    &:hover, 
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.15);
+      border-bottom-color: $color-light;
+      background-color: rgba(255, 255, 255, 0.15);
+  }
     }
 
    &:nth-of-type(1) {
